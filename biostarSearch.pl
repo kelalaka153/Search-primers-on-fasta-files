@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Bio::SeqIO;
 
-my $usage = "perl dnamotif.pl <fasta file> <primers file>";
+my $usage = "perl biostarSearch.pl <fasta file> <primers file>";
 my $fasta_filename = shift(@ARGV) or die("Usage: $usage $!");
 my $pfile = shift(@ARGV) or die("Usage: $usage $!");
 my $start = 0;

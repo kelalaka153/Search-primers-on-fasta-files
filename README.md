@@ -1,5 +1,4 @@
-# fasta
-Searching primers on Fasta files
+# Searching primers on Fasta files
 
 This code was an attempt to help a friend on their PhD.
 
@@ -7,8 +6,11 @@ The request was looking the existance of the primers on the given DNA/RNA sequen
 The squence result was a [Fasta file format](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/)
 and with column size 70 ( the max for fasta 80).
 
-I've written a search with grep to do this one need to convert the fatsa into one line.
-Once one-line is on the hand the grep can find the position very easily.
+I've written a search with grep tool. To do this, one need to convert the fatsa file into [one line](https://askubuntu.com/a/164063/480954).
+
+`cat myfile | tr -d '\r\n'`
+
+Once one-line is ready, the grep can find the positions very easily.
 This, however, only returns positions so one has to convert row and line to see that in the fatsa file.
 
 Instead I've seen that BioStar has a perl module for this. Within the code, it is easy to print the line and column information.
